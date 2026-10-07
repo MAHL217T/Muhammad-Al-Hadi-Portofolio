@@ -73,7 +73,15 @@ const portfolioData = {
     }
   ],
 
-  certifications: []
+  certifications: [
+    {
+      title: 'Nakamate: School in The Cloud — Online Mentoring Program',
+      issuer: 'Tokopedia × Zenius Education',
+      date: '27 Februari 2021',
+      credential:
+        'Sertifikat partisipasi sebagai peserta dalam program mentoring online Nakamate: School in The Cloud. Program ini menjadi bagian dari kegiatan pengembangan pembelajaran dan pengalaman belajar secara daring.'
+    }
+  ]
 };
 
 // ===============================
