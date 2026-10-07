@@ -128,6 +128,15 @@ document.addEventListener('DOMContentLoaded', () => {
               <span>${item.date}</span>
             </div>
             <p>${item.credential}</p>
+            ${
+              item.image
+                ? `
+                  <a class="certification-image-link" href="${item.image}" target="_blank" rel="noopener noreferrer" aria-label="Buka gambar sertifikat ${item.title} di tab baru">
+                    <img src="${item.image}" alt="Sertifikat ${item.title}" loading="lazy">
+                  </a>
+                `
+                : ''
+            }
           </article>
         `
       )

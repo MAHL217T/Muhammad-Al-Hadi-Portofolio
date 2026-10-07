@@ -78,8 +78,16 @@ const portfolioData = {
       title: 'Nakamate: School in The Cloud — Online Mentoring Program',
       issuer: 'Tokopedia × Zenius Education',
       date: '27 Februari 2021',
+      image: 'assets/images/sertifikat nakamate.png',
       credential:
         'Sertifikat partisipasi sebagai peserta dalam program mentoring online Nakamate: School in The Cloud. Program ini menjadi bagian dari kegiatan pengembangan pembelajaran dan pengalaman belajar secara daring.'
+    },
+    {
+      title: 'Kuliah Umum Fakultas Sains dan Teknologi UIN Suska Riau TA 2021/2022',
+      issuer: 'Fakultas Sains dan Teknologi, UIN Sultan Syarif Kasim Riau',
+      date: '16 September 2021',
+      credential:
+        'Sertifikat partisipasi sebagai peserta dalam Kuliah Umum Fakultas Sains dan Teknologi UIN Suska Riau TA 2021/2022. Program ini membahas wawasan strategis mengenai perkembangan digitalisasi menuju era Industri 5.0, serta eksplorasi peluang dan tantangan dunia kerja di era ekonomi digital.'
     }
   ]
 };
