@@ -610,37 +610,115 @@ body.light-mode .site-header.scrolled {
   gap: 1.5rem;
 }
 
-.education-item,
-.certification-card {
+.education-certifications-layout {
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.7fr);
+  align-items: start;
+}
+
+.education-item {
   padding: 1.6rem;
   margin-bottom: 1rem;
 }
 
-.certification-head {
-  display: flex;
-  justify-content: space-between;
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  align-items: stretch;
   gap: 1rem;
-  margin-bottom: 0.8rem;
 }
 
-.certification-head span {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  white-space: nowrap;
+.certification-card {
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.certification-image-link {
-  display: block;
-  margin-top: 1.25rem;
+.certification-image-link,
+.certification-image-placeholder {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--bg-soft);
 }
 
 .certification-image-link img {
-  display: block;
   width: 100%;
-  max-height: 32rem;
+  height: 100%;
   object-fit: contain;
+}
+
+.certification-image-action {
+  position: absolute;
+  right: 0.65rem;
+  bottom: 0.65rem;
+  padding: 0.25rem 0.55rem;
   border: 1px solid var(--border);
-  border-radius: calc(var(--radius) * 0.75);
+  border-radius: 999px;
+  background: var(--panel-strong);
+  color: var(--text-primary);
+  font-size: 0.72rem;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.certification-image-link:hover .certification-image-action,
+.certification-image-link:focus-visible .certification-image-action {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.certification-image-placeholder {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.certification-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.1rem;
+}
+
+.certification-date {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  padding: 0.18rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.certification-content h4 {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.certification-issuer {
+  margin-bottom: 0.65rem;
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.certification-description {
+  display: -webkit-box;
+  overflow: hidden;
+  margin-top: auto;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .empty-state {

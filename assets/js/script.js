@@ -120,23 +120,26 @@ document.addEventListener('DOMContentLoaded', () => {
       .map(
         (item) => `
           <article class="certification-card reveal">
-            <div class="certification-head">
-              <div>
-                <h4>${item.title}</h4>
-                <p>${item.issuer}</p>
-              </div>
-              <span>${item.date}</span>
-            </div>
-            <p>${item.credential}</p>
             ${
               item.image
                 ? `
                   <a class="certification-image-link" href="${item.image}" target="_blank" rel="noopener noreferrer" aria-label="Buka gambar sertifikat ${item.title} di tab baru">
                     <img src="${item.image}" alt="Sertifikat ${item.title}" loading="lazy">
+                    <span class="certification-image-action">Lihat sertifikat ↗</span>
                   </a>
                 `
-                : ''
+                : `
+                  <div class="certification-image-placeholder" aria-hidden="true">
+                    <span>Sertifikat</span>
+                  </div>
+                `
             }
+            <div class="certification-content">
+              <span class="certification-date">${item.date}</span>
+              <h4>${item.title}</h4>
+              <p class="certification-issuer">${item.issuer}</p>
+              <p class="certification-description">${item.credential}</p>
+            </div>
           </article>
         `
       )
