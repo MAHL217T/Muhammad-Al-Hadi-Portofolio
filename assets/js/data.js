@@ -53,6 +53,14 @@ const portfolioData = {
 
   experiences: [
     {
+      period: 'Januari 2024 — Februari 2024',
+      role: 'Corporate Administration & Customer Service Intern',
+      institution: 'PT Bank Riau Kepri Syariah (BRKS)',
+      description:
+        'Mengelola registrasi, distribusi, dan pengarsipan surat resmi masuk dan keluar, mendukung operasional Customer Service dalam melayani kebutuhan informasi serta administrasi nasabah, dan memastikan ketelitian data untuk meningkatkan efisiensi alur kerja cabang.',
+      skills: ['Corporate Administration', 'Customer Service', 'Document Archiving', 'Data Compliance']
+    },
+    {
       period: '2024 — 2025',
       role: 'Asisten Dosen — Praktikum Jaringan Komputer',
       institution: 'Laboratorium Teknik Elektro, UIN Sultan Syarif Kasim Riau',
