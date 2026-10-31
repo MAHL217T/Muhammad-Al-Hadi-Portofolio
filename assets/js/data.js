@@ -90,6 +90,20 @@ const portfolioData = {
 
   certifications: [
     {
+      title: 'Introduction to Cybersecurity',
+      issuer: 'Cisco Networking Academy',
+      date: '2026',
+      image:
+        'assets/images/Pengenalan%20Keamanan%20Siber/Introduction_to_Cybersecurity_certificate_muhammadalhadi651-gmail-com_9e264279-4258-4645-8f80-1424ae7ea46e_page-0001.jpg',
+      badge:
+        'assets/images/Pengenalan%20Keamanan%20Siber/introduction-to-cybersecurity.png',
+      credlyBadgeId: 'be86b5ca-292b-49f2-995e-d3b27c6395d0',
+      credlyUrl:
+        'https://www.credly.com/badges/be86b5ca-292b-49f2-995e-d3b27c6395d0/public_url',
+      credential:
+        'Menyelesaikan kursus Introduction to Cybersecurity yang membahas konsep dasar keamanan siber, ancaman dan kerentanan, serta praktik untuk melindungi data dan sistem.'
+    },
+    {
       title: 'Introduction to Modern AI',
       issuer: 'IBM SkillsBuild',
       date: '2026',
