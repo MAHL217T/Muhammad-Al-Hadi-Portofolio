@@ -90,6 +90,20 @@ const portfolioData = {
 
   certifications: [
     {
+      title: 'Introduction to Modern AI',
+      issuer: 'IBM SkillsBuild',
+      date: '2026',
+      image:
+        'assets/images/Introduction%20to%20Modern%20AI/Introduction_to_Modern_AI_certificate_muhammadalhadi651-gmail-com_f9016b21-b357-4e35-a098-f0145fdbaa-1.png',
+      badge:
+        'assets/images/Introduction%20to%20Modern%20AI/introduction-to-modern-ai.png',
+      credlyBadgeId: 'cae2cf76-6993-45c3-8d02-a226e4e3ab07',
+      credlyUrl:
+        'https://www.credly.com/badges/cae2cf76-6993-45c3-8d02-a226e4e3ab07/public_url',
+      credential:
+        'Menyelesaikan program Introduction to Modern AI dan memperoleh badge digital terverifikasi.'
+    },
+    {
       title: 'Networking Basics',
       issuer: 'Cisco Networking Academy',
       date: '31 Oktober 2026',
