@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h4>${item.title}</h4>
             <p class="timeline-institution">${item.institution}</p>
             <p>${item.description}</p>
-            <p class="project-highlight"><strong>Project akhir:</strong> ${item.project}</p>
+            ${item.project ? `<p class="project-highlight"><strong>Project akhir:</strong> ${item.project}</p>` : ''}
           </article>
         `
       )
@@ -120,20 +120,32 @@ document.addEventListener('DOMContentLoaded', () => {
       .map(
         (item) => `
           <article class="certification-card reveal">
-            ${
-              item.image
-                ? `
-                  <a class="certification-image-link" href="${item.image}" target="_blank" rel="noopener noreferrer" aria-label="Buka gambar sertifikat ${item.title} di tab baru">
-                    <img src="${item.image}" alt="Sertifikat ${item.title}" loading="lazy">
-                    <span class="certification-image-action">Lihat sertifikat ↗</span>
-                  </a>
-                `
-                : `
-                  <div class="certification-image-placeholder" aria-hidden="true">
-                    <span>Sertifikat</span>
-                  </div>
-                `
-            }
+            <div class="certification-media ${item.badge ? 'has-badge' : ''}">
+              ${
+                item.image
+                  ? `
+                    <a class="certification-image-link" href="${item.image}" target="_blank" rel="noopener noreferrer" aria-label="Buka gambar sertifikat ${item.title} di tab baru">
+                      <img src="${item.image}" alt="Sertifikat ${item.title}" loading="lazy">
+                      <span class="certification-image-action">Lihat sertifikat ↗</span>
+                    </a>
+                  `
+                  : `
+                    <div class="certification-image-placeholder" aria-hidden="true">
+                      <span>Sertifikat</span>
+                    </div>
+                  `
+              }
+              ${
+                item.badge
+                  ? `
+                    <a class="certification-badge-link" href="${item.badge}" target="_blank" rel="noopener noreferrer" aria-label="Buka badge ${item.title} di tab baru">
+                      <img src="${item.badge}" alt="Badge ${item.title}" loading="lazy">
+                      <span class="certification-image-action">Lihat badge ↗</span>
+                    </a>
+                  `
+                  : ''
+              }
+            </div>
             <div class="certification-content">
               <span class="certification-date">${item.date}</span>
               <h4>${item.title}</h4>

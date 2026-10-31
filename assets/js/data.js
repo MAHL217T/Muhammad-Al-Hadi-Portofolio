@@ -78,10 +78,28 @@ const portfolioData = {
       description:
         'Mempelajari arsitektur komputer, pemrograman, sistem digital, jaringan komputer, sistem tertanam, otomasi, basis data, serta pengembangan perangkat lunak.',
       project: 'Tugas Akhir: Rancang Bangun Aplikasi Presensi Siswa Berbasis Web dengan Fitur Akses untuk Orang Tua (Studi Kasus SMPN 9 Mandau)'
+    },
+    {
+      period: '2018 — 2021',
+      title: 'Sekolah Menengah Atas',
+      institution: 'SMAN 4 Mandau',
+      description:
+        'Aktif sebagai anggota OSIS dan GoGreen selama masa SMA.'
     }
   ],
 
   certifications: [
+    {
+      title: 'Networking Basics',
+      issuer: 'Cisco Networking Academy',
+      date: '31 Oktober 2026',
+      image:
+        'assets/images/Networking%20Basics%20Update%3D/NetworkingBasicsUpdate20261031-20-wd25qy-1.png',
+      badge:
+        'assets/images/Networking%20Basics%20Update%3D/networking-basics.png',
+      credential:
+        'Menyelesaikan kursus Networking Basics dan memperoleh kredensial tingkat student. Materi mencakup komunikasi jaringan, standar dan protokol, Ethernet, IPv4 dan IPv6, router, serta pengujian dan pemecahan masalah konektivitas jaringan.'
+    },
     {
       title: 'Nakamate: School in The Cloud — Online Mentoring Program',
       issuer: 'Tokopedia × Zenius Education',
