@@ -687,6 +687,48 @@ body.light-mode .site-header.scrolled {
   object-fit: contain;
 }
 
+.certification-verification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-soft);
+  text-align: center;
+}
+
+.certification-verification-label {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.credly-badge-embed {
+  width: 150px;
+  height: 270px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--panel);
+}
+
+.certification-verify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: color var(--transition);
+}
+
+.certification-verify-link:hover,
+.certification-verify-link:focus-visible {
+  color: var(--text-primary);
+}
+
 .certification-image-action {
   position: absolute;
   right: 0.65rem;

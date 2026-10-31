@@ -97,6 +97,9 @@ const portfolioData = {
         'assets/images/Networking%20Basics%20Update%3D/NetworkingBasicsUpdate20261031-20-wd25qy-1.png',
       badge:
         'assets/images/Networking%20Basics%20Update%3D/networking-basics.png',
+      credlyBadgeId: '810ebe9f-bc07-4bd9-9407-b960690438d5',
+      credlyUrl:
+        'https://www.credly.com/badges/810ebe9f-bc07-4bd9-9407-b960690438d5/public_url',
       credential:
         'Menyelesaikan kursus Networking Basics dan memperoleh kredensial tingkat student. Materi mencakup komunikasi jaringan, standar dan protokol, Ethernet, IPv4 dan IPv6, router, serta pengujian dan pemecahan masalah konektivitas jaringan.'
     },

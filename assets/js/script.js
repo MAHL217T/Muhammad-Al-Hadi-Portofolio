@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .map(
         (item) => `
           <article class="certification-card reveal">
-            <div class="certification-media ${item.badge ? 'has-badge' : ''}">
+            <div class="certification-media ${item.badge && !item.credlyBadgeId ? 'has-badge' : ''}">
               ${
                 item.image
                   ? `
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   `
               }
               ${
-                item.badge
+                item.badge && !item.credlyBadgeId
                   ? `
                     <a class="certification-badge-link" href="${item.badge}" target="_blank" rel="noopener noreferrer" aria-label="Buka badge ${item.title} di tab baru">
                       <img src="${item.badge}" alt="Badge ${item.title}" loading="lazy">
@@ -152,10 +152,38 @@ document.addEventListener('DOMContentLoaded', () => {
               <p class="certification-issuer">${item.issuer}</p>
               <p class="certification-description">${item.credential}</p>
             </div>
+            ${
+              item.credlyBadgeId && item.credlyUrl
+                ? `
+                  <div class="certification-verification">
+                    <p class="certification-verification-label">Kredensial terverifikasi</p>
+                    <div
+                      class="credly-badge-embed"
+                      data-iframe-width="150"
+                      data-iframe-height="270"
+                      data-share-badge-id="${item.credlyBadgeId}"
+                      data-share-badge-host="https://www.credly.com"
+                      aria-label="Badge ${item.title} dari Credly"
+                    ></div>
+                    <a class="certification-verify-link" href="${item.credlyUrl}" target="_blank" rel="noopener noreferrer">
+                      Verifikasi di Credly <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                `
+                : ''
+            }
           </article>
         `
       )
       .join('');
+
+    if (portfolioData.certifications.some((item) => item.credlyBadgeId && item.credlyUrl)) {
+      const credlyScript = document.createElement('script');
+      credlyScript.src = 'https://cdn.credly.com/assets/utilities/embed.js';
+      credlyScript.async = true;
+      credlyScript.onerror = () => console.error('Gagal memuat embed badge Credly.');
+      document.body.appendChild(credlyScript);
+    }
   };
 
   const setTheme = (theme) => {
